@@ -39,7 +39,7 @@ class ResponsiveBuilder extends StatelessWidget {
       return DeviceScreenType.Desktop;
     }
 
-    if (deviceWidth > 600) {
+    if (deviceWidth > 900) {
       return DeviceScreenType.Tablet;
     }
 

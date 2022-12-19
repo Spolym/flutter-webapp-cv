@@ -23,7 +23,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/bagvandCV.pdf
+    - assets/Resume_Samuel_Polym.pdf
     - assets/images/
 
   fonts:

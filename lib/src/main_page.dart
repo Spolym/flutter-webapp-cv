@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:personal_web/src/body.dart';
 import 'package:personal_web/src/components/drawer.dart';
 import 'package:personal_web/src/components/nav_bar.dart';
-import 'package:personal_web/src/components/social_media_bar.dart';
 import 'package:personal_web/src/sections/about/about_mobile.dart';
 import 'package:personal_web/src/sections/home/home_mobile.dart';
 import 'package:personal_web/src/utils/social_colors.dart';
@@ -15,16 +14,14 @@ class MobilePage extends StatefulWidget {
   final void Function(int index) onItemSelected;
   final List<Widget> pagesWidget;
 
-
-  const MobilePage({this.pageIndex, this.onItemSelected,@required this.pagesWidget});
+  const MobilePage(
+      {this.pageIndex, this.onItemSelected, @required this.pagesWidget});
 
   @override
   _MobilePageState createState() => _MobilePageState();
 }
 
 class _MobilePageState extends State<MobilePage> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +43,8 @@ class MainPage extends StatelessWidget {
   final void Function(int index) onItemSelected;
   final List<Widget> pagesWidget;
 
-  const MainPage({ this.pageIndex, this.onItemSelected,@required this.pagesWidget});
+  const MainPage(
+      {this.pageIndex, this.onItemSelected, @required this.pagesWidget});
 
   @override
   Widget build(BuildContext context) {
@@ -59,8 +57,14 @@ class MainPage extends StatelessWidget {
       body: Stack(
         children: [
           CustomPaint(painter: _BackgroundPainter(), size: Size.infinite),
-          PageBody(pageIndex: pageIndex, onItemSelected: onItemSelected, pagesWidget: pagesWidget,),
-          Align(alignment: Alignment.centerLeft, child: SocialMediaBar()),
+          PageBody(
+            pageIndex: pageIndex,
+            onItemSelected: onItemSelected,
+            pagesWidget: pagesWidget,
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+          ),
         ],
       ),
     );

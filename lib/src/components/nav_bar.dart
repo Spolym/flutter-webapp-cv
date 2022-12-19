@@ -123,7 +123,7 @@ class _NavbarState extends State<Navbar> {
                   backgroundColor: ColorApp.colorMain,
                   radius: 15,
                   child: Text(
-                    'B',
+                    'S',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -134,7 +134,7 @@ class _NavbarState extends State<Navbar> {
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    text: 'Mr.B',
+                    text: 'Samuel',
                     style: textStyle.copyWith(
                       color: Colors.black.withOpacity(0.75),
                       fontSize: 18,
@@ -142,7 +142,7 @@ class _NavbarState extends State<Navbar> {
                     ),
                     children: [
                       TextSpan(
-                        text: 'agvand',
+                        text: 'Polym',
                         style: textStyle.copyWith(
                           color: ColorApp.colorMain,
                           fontSize: 18,

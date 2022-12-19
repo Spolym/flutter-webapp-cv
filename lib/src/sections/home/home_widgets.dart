@@ -34,93 +34,45 @@ class _IntroductionState extends State<Introduction>
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Typewriter(
-            '¡Hello! I am...',
-            animate: !helloSeen,
-            textStyle: TextStyle(
+          Text(
+            'Hello, I am...',
+            style: TextStyle(
               color: ColorApp.colorMain,
               fontSize: 24,
               fontWeight: FontWeight.w700,
               letterSpacing: 1.4,
             ),
-            onEnd: () {
-              if (mounted) {
-                setState(() {
-                  showName = true;
-                  helloSeen = true;
-                });
-              }
-            },
           ),
-          if (showName) ...[
-            SizedBox(height: 16),
-            Typewriter(
-              'Behnam Bagvand',
-              animate: !nameSeen,
-              textStyle: TextStyle(
-                color: Colors.blueGrey[900],
-                fontSize: 40,
-                fontWeight: FontWeight.w700,
-              ),
-              onEnd: () {
-                if (mounted) {
-                  setState(() {
-                    showPosition = true;
-                    nameSeen = true;
-                  });
-                }
-              },
+          SizedBox(height: 16),
+          Text(
+            'Samuel Polym',
+            style: TextStyle(
+              color: Colors.blueGrey[900],
+              fontSize: 40,
+              fontWeight: FontWeight.w700,
             ),
-          ],
-          if (showPosition) ...[
-            SizedBox(height: 16),
-            Typewriter(
-              'Mobile App Developer',
-              animate: !positionSeen,
-              textStyle: TextStyle(
-                color: Colors.blueGrey[900],
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-              ),
-              onEnd: () {
-                if (mounted) {
-                  setState(() {
-                    showAbstract = true;
-                    positionSeen = true;
-                  });
-                }
-              },
+          ),
+          SizedBox(height: 16),
+          Text(
+            'Mobile App Developer',
+            style: TextStyle(
+              color: Colors.blueGrey[900],
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
             ),
-          ],
-          if (showAbstract) ...[
-            SizedBox(height: 24),
-            Typewriter(
-              "I build neat, cool and scalable mobile apps with Flutter and I'm an aspiring deep learning engineer.\n"
-              'I love to learn and build new stuff that are beneficial to the community and cool to work on.\n'
-              'I also have great interest in the open source community.',
-              animate: !abstractSeen,
-              textStyle: TextStyle(
-                color: Colors.grey,
-                fontSize: 16,
-                letterSpacing: 1.2,
-                height: 1.3,
-              ),
-              onEnd: () {
-                Future.delayed(Duration(milliseconds: 500), () {
-                  if (mounted) {
-                    setState(() {
-                      showHireMe = true;
-                      abstractSeen = true;
-                    });
-                  }
-                });
-              },
+          ),
+          SizedBox(height: 24),
+          Text(
+            "I build neat, cool and scalable mobile apps with Flutter and I'm an aspiring deep learning engineer.\n"
+            'I love to learn and build new stuff that are beneficial to the community and cool to work on.\n'
+            'I also have great interest in the open source community.',
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 16,
+              letterSpacing: 1.2,
+              height: 1.3,
             ),
-          ],
-          if (showHireMe) ...[
-            SizedBox(height: 30),
-            _HireMeButton(),
-          ],
+          ),
         ],
       ),
     );
@@ -158,7 +110,9 @@ class __HireMeButtonState extends State<_HireMeButton> {
         decoration: BoxDecoration(
           border: Border.all(width: 1.4, color: ColorApp.colorMain),
           borderRadius: BorderRadius.all(Radius.circular(50)),
-          color: hovered ? ColorApp.colorMain.withOpacity(1.0) : Colors.transparent,
+          color: hovered
+              ? ColorApp.colorMain.withOpacity(1.0)
+              : Colors.transparent,
         ),
         child: AnimatedDefaultTextStyle(
           duration: kThemeAnimationDuration,
