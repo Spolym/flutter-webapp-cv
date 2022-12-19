@@ -34,7 +34,7 @@ class MobileNavbar extends StatelessWidget implements PreferredSizeWidget {
             backgroundColor: ColorApp.colorMain,
             radius: 15,
             child: Text(
-              'B',
+              'S',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -45,7 +45,7 @@ class MobileNavbar extends StatelessWidget implements PreferredSizeWidget {
           RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
-              text: 'Mr.B',
+              text: 'Samuel ',
               style: textStyle.copyWith(
                 color: Colors.black.withOpacity(0.75),
                 fontSize: 18,
@@ -53,7 +53,7 @@ class MobileNavbar extends StatelessWidget implements PreferredSizeWidget {
               ),
               children: [
                 TextSpan(
-                  text: 'agvand',
+                  text: 'Polym',
                   style: textStyle.copyWith(
                     color: ColorApp.colorMain,
                     fontSize: 18,
@@ -96,7 +96,8 @@ class _NavbarState extends State<Navbar> {
     'About',
     'Experience',
     'Projects',
-    'Blog',
+    'LinkedIn',
+    'GitHub',
     'Resume',
   ];
 
@@ -134,7 +135,7 @@ class _NavbarState extends State<Navbar> {
                 RichText(
                   textAlign: TextAlign.center,
                   text: TextSpan(
-                    text: 'Samuel',
+                    text: 'Samuel ',
                     style: textStyle.copyWith(
                       color: Colors.black.withOpacity(0.75),
                       fontSize: 18,
@@ -176,10 +177,17 @@ class _NavbarState extends State<Navbar> {
                         break;
                       case 'Resume':
                         break;
-                      case 'Blog':
+
+                      case 'LinkedIn':
                         UrlHelper.launchUrl(
-                          'https://medium.com/@debrahkwesibuabeng2',
+                          'https://www.linkedin.com/in/samuel-polym-a73547244/',
                         );
+                        break;
+                      case 'GitHub':
+                        UrlHelper.launchUrl(
+                          'https://github.com/spolym',
+                        );
+
                         break;
                       default:
                       // setState(() {

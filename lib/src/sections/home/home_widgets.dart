@@ -92,9 +92,6 @@ class __HireMeButtonState extends State<_HireMeButton> {
     return InkWell(
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
-      onTap: () {
-        UrlHelper.launchUrl("mailto:Mr.bagvand@gmail.com");
-      },
       onHover: (value) {
         if (mounted) {
           setState(() {
@@ -121,9 +118,6 @@ class __HireMeButtonState extends State<_HireMeButton> {
             fontSize: 17,
             fontWeight: FontWeight.w500,
             fontFamily: 'Ubuntu',
-          ),
-          child: Text(
-            'Hire Me',
           ),
         ),
       ),

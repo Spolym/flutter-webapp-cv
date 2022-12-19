@@ -27,7 +27,8 @@ class _AppDrawerState extends State<AppDrawer> {
     'About',
     'Experience',
     'Projects',
-    'Blog',
+    'LinkedIn',
+    'GitHub',
     'Resume',
   ];
 
@@ -78,10 +79,16 @@ class _AppDrawerState extends State<AppDrawer> {
                         break;
                       case 'Resume':
                         break;
-                      case 'Blog':
+                      case 'LinkedIn':
                         UrlHelper.launchUrl(
-                          'https://medium.com/@debrahkwesibuabeng2',
+                          'https://www.linkedin.com/in/samuel-polym-a73547244/',
                         );
+                        break;
+                      case 'GitHub':
+                        UrlHelper.launchUrl(
+                          'https://github.com/spolym',
+                        );
+
                         break;
                       default:
                       // setState(() {
