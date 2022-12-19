@@ -13,9 +13,25 @@ class ExperianceSectionMobile extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text(
+              'Professional Experiance',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 40,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 1.4,
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            ExperainceContent(color: ColorApp.colorMain, isMobile: true),
             ExperainceManImage(),
             SizedBox(height: 32),
-            ExperainceContent(color: ColorApp.colorMain, isMobile: true)
+            ExperainceContent(color: ColorApp.colorMain, isMobile: true),
+            ExperainceManImage(),
+            SizedBox(height: 32),
+            ExperainceContent(color: ColorApp.colorMain, isMobile: true),
           ],
         ),
       ),

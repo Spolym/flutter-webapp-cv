@@ -10,30 +10,19 @@ class ExperainceManImage extends StatelessWidget {
 class ExperainceContent extends StatefulWidget {
   final Color color;
   final bool isMobile;
+  final bool showHeader;
 
-  const ExperainceContent({this.color = Colors.white, this.isMobile = false});
+  const ExperainceContent({
+    this.color = Colors.white,
+    this.isMobile = false,
+    this.showHeader = true,
+  });
   @override
   _ExperainceContentState createState() => _ExperainceContentState();
 }
 
 class _ExperainceContentState extends State<ExperainceContent>
     with TickerProviderStateMixin {
-  static bool showAbout = false;
-  static bool showStack1 = false;
-  static bool showStack2 = false;
-
-  static bool whoSeen = false;
-  static bool aboutSeen = false;
-  static bool stack1Seen = false;
-  static bool stack2Seen = false;
-
-  final stack = [
-    'Dart (Flutter)',
-    'Java (Android)',
-    'Firebase',
-    'MySQL',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return AnimatedSize(
@@ -45,23 +34,25 @@ class _ExperainceContentState extends State<ExperainceContent>
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
-            'Professional Experiance',
-            style: TextStyle(
-              color: widget.color,
-              fontSize: 24,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 1.4,
+          if (widget.showHeader)
+            Text(
+              'Professional Experiance',
+              style: TextStyle(
+                color: widget.color,
+                fontSize: 24,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 1.4,
+              ),
             ),
-          ),
-          Container(
-            width: 60,
-            height: 2,
-            margin: const EdgeInsets.only(top: 4, bottom: 16),
-            color: widget.color,
-          ),
+          if (widget.showHeader)
+            Container(
+              width: 60,
+              height: 2,
+              margin: const EdgeInsets.only(top: 4, bottom: 16),
+              color: widget.color,
+            ),
           Text(
-            "",
+            "A decription",
             style: TextStyle(
               color: widget.color,
               fontSize: 16,

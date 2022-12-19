@@ -10,20 +10,56 @@ class _ExperianceSectionState extends State<ExperianceSection> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
+      child: ListView(
         children: [
-          Spacer(flex: 2),
-          SizedBox(width: 32),
-          Expanded(
-            flex: 8,
-            child: ExperainceManImage(),
+          Row(
+            children: [
+              Spacer(flex: 2),
+              SizedBox(width: 32),
+              Expanded(
+                flex: 8,
+                child: ExperainceManImage(),
+              ),
+              SizedBox(width: 36),
+              Expanded(
+                flex: 6,
+                child: ExperainceContent(),
+              ),
+              Spacer(flex: 2),
+            ],
           ),
-          SizedBox(width: 36),
-          Expanded(
-            flex: 6,
-            child: ExperainceContent(),
+          Row(
+            children: [
+              Spacer(flex: 2),
+              SizedBox(width: 32),
+              Expanded(
+                flex: 8,
+                child: ExperainceManImage(),
+              ),
+              SizedBox(width: 36),
+              Expanded(
+                flex: 6,
+                child: ExperainceContent(),
+              ),
+              Spacer(flex: 2),
+            ],
           ),
-          Spacer(flex: 2),
+          Row(
+            children: [
+              Spacer(flex: 2),
+              SizedBox(width: 32),
+              Expanded(
+                flex: 8,
+                child: ExperainceManImage(),
+              ),
+              SizedBox(width: 36),
+              Expanded(
+                flex: 6,
+                child: ExperainceContent(),
+              ),
+              Spacer(flex: 2),
+            ],
+          ),
         ],
       ),
     );
