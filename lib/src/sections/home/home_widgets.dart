@@ -1,9 +1,5 @@
-import 'dart:math' show pi;
-
 import 'package:flutter/material.dart';
-import 'package:personal_web/src/components/typewriter.dart';
 import 'package:personal_web/src/utils/social_colors.dart';
-import 'package:personal_web/src/utils/url_helper.dart';
 
 /// Introductory texts with the Hire Me button as well
 class Introduction extends StatefulWidget {
@@ -54,7 +50,7 @@ class _IntroductionState extends State<Introduction>
           ),
           SizedBox(height: 16),
           Text(
-            'Mobile App Developer',
+            'Computer Engineer',
             style: TextStyle(
               color: Colors.blueGrey[900],
               fontSize: 20,
@@ -63,9 +59,11 @@ class _IntroductionState extends State<Introduction>
           ),
           SizedBox(height: 24),
           Text(
-            "I build neat, cool and scalable mobile apps with Flutter and I'm an aspiring deep learning engineer.\n"
-            'I love to learn and build new stuff that are beneficial to the community and cool to work on.\n'
-            'I also have great interest in the open source community.',
+            "I am a computer engineer with a strong passion for software "
+            "development. I have experience in a variety of programming "
+            "languages and methodologies, and I am eager to use my skills to "
+            "solve complex problems and create innovative solutions. I am "
+            "committed to continuous learning and growth in my profession.",
             style: TextStyle(
               color: Colors.grey,
               fontSize: 16,

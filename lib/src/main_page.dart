@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:personal_web/src/body.dart';
 import 'package:personal_web/src/components/drawer.dart';
 import 'package:personal_web/src/components/nav_bar.dart';
-import 'package:personal_web/src/sections/about/about_mobile.dart';
-import 'package:personal_web/src/sections/home/home_mobile.dart';
 import 'package:personal_web/src/utils/social_colors.dart';
 
 class MobilePage extends StatefulWidget {

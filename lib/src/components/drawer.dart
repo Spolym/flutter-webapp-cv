@@ -77,6 +77,17 @@ class _AppDrawerState extends State<AppDrawer> {
                           }
                         }
                         break;
+                      case 'Experience':
+                        if (mounted) {
+                          setState(() {
+                            selectedIndex = items.indexOf(item);
+                          });
+
+                          if (widget.onItemSelected != null) {
+                            widget.onItemSelected(selectedIndex);
+                          }
+                        }
+                        break;
                       case 'Resume':
                         break;
                       case 'LinkedIn':

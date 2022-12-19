@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:personal_web/src/components/typewriter.dart';
 
 class AboutManImage extends StatelessWidget {
   @override
@@ -46,24 +45,14 @@ class _AboutContentState extends State<AboutContent>
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Typewriter(
+          Text(
             'Who am I?',
-            animate: !whoSeen,
-            duration: const Duration(seconds: 1),
-            textStyle: TextStyle(
+            style: TextStyle(
               color: widget.color,
               fontSize: 24,
               fontWeight: FontWeight.w700,
               letterSpacing: 1.4,
             ),
-            onEnd: () {
-              if (mounted) {
-                setState(() {
-                  showAbout = true;
-                  whoSeen = true;
-                });
-              }
-            },
           ),
           Container(
             width: 60,
@@ -71,75 +60,25 @@ class _AboutContentState extends State<AboutContent>
             margin: const EdgeInsets.only(top: 4, bottom: 16),
             color: widget.color,
           ),
-          if (showAbout)
-            Typewriter(
-              "Hello! I'm Behnam Bagvand, an computer engineering student and software developer.\n\n"
-              'I love to create performant and interesting stuff that are beneficial to the community.\n'
-              'I enjoy learning and exploring new areas in the technologies I work with and even the ones outside my stack.'
-,              animate: !aboutSeen,
-              duration: const Duration(seconds: 10),
-              textStyle: TextStyle(
-                color: widget.color,
-                fontSize: 16,
-                letterSpacing: 1.2,
-                height: 1.3,
-              ),
-              onEnd: () {
-                if (mounted) {
-                  setState(() {
-                    showStack1 = true;
-                    aboutSeen = true;
-                  });
-                }
-              },
-            ),
-          if (showStack1) ...[
-            SizedBox(height: 44),
-            Typewriter(
-              'What do I work with?',
-              animate: !stack1Seen,
-              duration: const Duration(seconds: 1),
-              textStyle: TextStyle(
-                color: widget.color,
-                fontSize: 24,
-                fontWeight: FontWeight.w700,
-                letterSpacing: 1.4,
-              ),
-              onEnd: () {
-                if (mounted) {
-                  setState(() {
-                    showStack2 = true;
-                    stack1Seen = true;
-                  });
-                }
-              },
-            ),
-            Container(
-              width: 60,
-              height: 2,
-              margin: const EdgeInsets.only(top: 4, bottom: 16),
+          Text(
+            "Hi there! My name is Sam, and I am currently a "
+            "senior in computer engineering at Michigan State University, "
+            "with a concentration in software systems. I am originally from "
+            "St. Joseph, Michigan and enjoy spending my free time playing disc"
+            "golf and tennis, as well as spending time with friends and family."
+            " Throughout my academic career, I have gained a strong foundation "
+            "in software development and am eager to apply my skills in a "
+            "professional setting. I am a hardworking and dedicated individual "
+            "who is committed to continuously learning and growing as a "
+            "professional. I am excited to see where my passion for computer "
+            "engineering and software systems takes me in my career.",
+            style: TextStyle(
               color: widget.color,
+              fontSize: 16,
+              letterSpacing: 1.2,
+              height: 1.3,
             ),
-          ],
-          if (showStack2)
-            widget.isMobile
-                ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: stack
-                        .map<Widget>(
-                          (s) => Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 8),
-                            child: _buildStackItem(s),
-                          ),
-                        )
-                        .toList(),
-                  )
-                : Wrap(
-                    spacing: 80,
-                    runSpacing: 12,
-                    children: stack.map<Widget>(_buildStackItem).toList(),
-                  ),
+          ),
         ],
       ),
     );
@@ -154,22 +93,13 @@ class _AboutContentState extends State<AboutContent>
           backgroundColor: widget.color,
         ),
         SizedBox(width: 5),
-        Typewriter(
+        Text(
           item,
-          animate: !stack2Seen,
-          duration: const Duration(seconds: 1),
-          textStyle: TextStyle(
+          style: TextStyle(
             color: widget.color,
             fontSize: 16,
             letterSpacing: 1.4,
           ),
-          onEnd: () {
-            if (mounted) {
-              setState(() {
-                stack2Seen = true;
-              });
-            }
-          },
         ),
       ],
     );
