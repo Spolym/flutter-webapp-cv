@@ -187,6 +187,19 @@ class _NavbarState extends State<Navbar> {
                           }
                         }
                         break;
+
+                      case 'Projects':
+                        if (mounted) {
+                          setState(() {
+                            selectedIndex = items.indexOf(item);
+                          });
+
+                          if (widget.onItemSelected != null) {
+                            widget.onItemSelected(selectedIndex);
+                          }
+                        }
+                        break;
+
                       case 'Resume':
                         break;
 

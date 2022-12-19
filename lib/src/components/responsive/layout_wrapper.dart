@@ -7,6 +7,8 @@ import 'package:personal_web/src/sections/experiance/experiance.dart';
 import 'package:personal_web/src/sections/experiance/experiance_mobile.dart';
 import 'package:personal_web/src/sections/home/home.dart';
 import 'package:personal_web/src/sections/home/home_mobile.dart';
+import 'package:personal_web/src/sections/projects/experiance_mobile.dart';
+import 'package:personal_web/src/sections/projects/projects.dart';
 
 class LayoutWrapper extends StatefulWidget {
   @override
@@ -29,12 +31,14 @@ class _LayoutWrapperState extends State<LayoutWrapper> {
     final List<Widget> pages = [
       HomeSectionMobile(),
       AboutSectionMobile(),
-      ExperianceSectionMobile()
+      ExperianceSectionMobile(),
+      ProjectsSectionMobile(),
     ];
     final List<Widget> pagesWeb = [
       HomeSection(),
       AboutSection(),
-      ExperianceSection()
+      ExperianceSection(),
+      ProjectsSection(),
     ];
 
     return ScreenTypeLayout(
