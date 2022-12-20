@@ -3,8 +3,8 @@ import 'package:personal_web/src/components/responsive/screen_type_layout.dart';
 import 'package:personal_web/src/main_page.dart';
 import 'package:personal_web/src/sections/about/about.dart';
 import 'package:personal_web/src/sections/about/about_mobile.dart';
-import 'package:personal_web/src/sections/experiance/experiance.dart';
-import 'package:personal_web/src/sections/experiance/experiance_mobile.dart';
+import 'package:personal_web/src/sections/experience/experience.dart';
+import 'package:personal_web/src/sections/experience/experience_mobile.dart';
 import 'package:personal_web/src/sections/home/home.dart';
 import 'package:personal_web/src/sections/home/home_mobile.dart';
 import 'package:personal_web/src/sections/projects/projects.dart';
@@ -31,13 +31,13 @@ class _LayoutWrapperState extends State<LayoutWrapper> {
     final List<Widget> pages = [
       HomeSectionMobile(),
       AboutSectionMobile(),
-      ExperianceSectionMobile(),
+      ExperienceSectionMobile(),
       ProjectsSectionMobile(),
     ];
     final List<Widget> pagesWeb = [
       HomeSection(),
       AboutSection(),
-      ExperianceSection(),
+      ExperienceSection(),
       ProjectsSection(),
     ];
 
