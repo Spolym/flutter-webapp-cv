@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_web/src/sections/experiance/experiance_info.dart';
 import 'package:personal_web/src/sections/experiance/experiance_widgets.dart';
 
 class ExperianceSection extends StatefulWidget {
@@ -23,7 +24,8 @@ class _ExperianceSectionState extends State<ExperianceSection> {
               SizedBox(width: 36),
               Expanded(
                 flex: 6,
-                child: ExperainceContent(),
+                child: ExperainceContent(
+                    jobTitle: jobOneTitle, jobDesc: jobOneDesc, jobImg: ""),
               ),
               Spacer(flex: 2),
             ],
@@ -39,7 +41,8 @@ class _ExperianceSectionState extends State<ExperianceSection> {
               SizedBox(width: 36),
               Expanded(
                 flex: 6,
-                child: ExperainceContent(),
+                child: ExperainceContent(
+                    jobTitle: jobOneTitle, jobDesc: jobOneDesc, jobImg: ""),
               ),
               Spacer(flex: 2),
             ],
@@ -55,7 +58,8 @@ class _ExperianceSectionState extends State<ExperianceSection> {
               SizedBox(width: 36),
               Expanded(
                 flex: 6,
-                child: ExperainceContent(),
+                child: ExperainceContent(
+                    jobTitle: jobOneTitle, jobDesc: jobOneDesc, jobImg: ""),
               ),
               Spacer(flex: 2),
             ],

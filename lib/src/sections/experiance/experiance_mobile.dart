@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_web/src/sections/experiance/experiance_info.dart';
 import 'package:personal_web/src/sections/experiance/experiance_widgets.dart';
 import 'package:personal_web/src/utils/social_colors.dart';
 
@@ -25,13 +26,31 @@ class ExperianceSectionMobile extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            ExperainceContent(color: ColorApp.colorMain, isMobile: true),
+            ExperainceContent(
+              color: ColorApp.colorMain,
+              isMobile: true,
+              jobTitle: jobOneTitle,
+              jobDesc: jobOneDesc,
+              jobImg: "",
+            ),
             ExperainceManImage(),
             SizedBox(height: 32),
-            ExperainceContent(color: ColorApp.colorMain, isMobile: true),
+            ExperainceContent(
+              color: ColorApp.colorMain,
+              isMobile: true,
+              jobTitle: jobOneTitle,
+              jobDesc: jobOneDesc,
+              jobImg: "",
+            ),
             ExperainceManImage(),
             SizedBox(height: 32),
-            ExperainceContent(color: ColorApp.colorMain, isMobile: true),
+            ExperainceContent(
+              color: ColorApp.colorMain,
+              isMobile: true,
+              jobTitle: jobOneTitle,
+              jobDesc: jobOneDesc,
+              jobImg: "",
+            ),
           ],
         ),
       ),

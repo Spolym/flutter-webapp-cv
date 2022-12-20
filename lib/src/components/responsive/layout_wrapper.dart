@@ -7,8 +7,8 @@ import 'package:personal_web/src/sections/experiance/experiance.dart';
 import 'package:personal_web/src/sections/experiance/experiance_mobile.dart';
 import 'package:personal_web/src/sections/home/home.dart';
 import 'package:personal_web/src/sections/home/home_mobile.dart';
-import 'package:personal_web/src/sections/projects/experiance_mobile.dart';
 import 'package:personal_web/src/sections/projects/projects.dart';
+import 'package:personal_web/src/sections/projects/projects_mobile.dart';
 
 class LayoutWrapper extends StatefulWidget {
   @override

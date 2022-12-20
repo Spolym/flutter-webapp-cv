@@ -7,14 +7,17 @@ class AppDrawer extends StatefulWidget {
   final int selectedIndex;
   final void Function(int index) onItemSelected;
 
-  const AppDrawer({this.selectedIndex = 0, this.onItemSelected});
+  const AppDrawer({
+    this.selectedIndex = 0,
+    required this.onItemSelected,
+  });
 
   @override
   _AppDrawerState createState() => _AppDrawerState();
 }
 
 class _AppDrawerState extends State<AppDrawer> {
-  int selectedIndex;
+  int selectedIndex = 0;
 
   final textStyle = TextStyle(
     color: Colors.white,
@@ -134,7 +137,7 @@ class _AppDrawerState extends State<AppDrawer> {
                               item,
                               style: textStyle.copyWith(
                                 fontWeight: FontWeight.w500,
-                                color: textStyle.color.withOpacity(
+                                color: textStyle.color?.withOpacity(
                                   selectedIndex == items.indexOf(item)
                                       ? 1.0
                                       : 0.75,

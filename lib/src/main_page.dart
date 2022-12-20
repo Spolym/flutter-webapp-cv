@@ -12,8 +12,11 @@ class MobilePage extends StatefulWidget {
   final void Function(int index) onItemSelected;
   final List<Widget> pagesWidget;
 
-  const MobilePage(
-      {this.pageIndex, this.onItemSelected, @required this.pagesWidget});
+  const MobilePage({
+    required this.pageIndex,
+    required this.onItemSelected,
+    required this.pagesWidget,
+  });
 
   @override
   _MobilePageState createState() => _MobilePageState();
@@ -41,15 +44,18 @@ class MainPage extends StatelessWidget {
   final void Function(int index) onItemSelected;
   final List<Widget> pagesWidget;
 
-  const MainPage(
-      {this.pageIndex, this.onItemSelected, @required this.pagesWidget});
+  const MainPage({
+    required this.pageIndex,
+    required this.onItemSelected,
+    required this.pagesWidget,
+  });
 
   @override
   Widget build(BuildContext context) {
     // Add the File Saver js script
     final script = html.document.createElement('script') as html.ScriptElement;
     script.src = "https://cdn.jsdelivr.net/g/filesaver.js";
-    html.document.body.nodes.add(script);
+    html.document.body?.nodes.add(script);
 
     return Scaffold(
       body: Stack(

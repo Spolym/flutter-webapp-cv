@@ -8,15 +8,22 @@ class ExperainceManImage extends StatelessWidget {
 }
 
 class ExperainceContent extends StatefulWidget {
-  final Color color;
-  final bool isMobile;
-  final bool showHeader;
-
   const ExperainceContent({
     this.color = Colors.white,
     this.isMobile = false,
     this.showHeader = true,
+    required this.jobTitle,
+    required this.jobDesc,
+    required this.jobImg,
   });
+
+  final Color color;
+  final bool isMobile;
+  final bool showHeader;
+  final String jobTitle;
+  final String jobDesc;
+  final String jobImg;
+
   @override
   _ExperainceContentState createState() => _ExperainceContentState();
 }

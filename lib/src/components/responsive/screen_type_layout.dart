@@ -6,13 +6,13 @@ enum DeviceScreenType { Mobile, Tablet, Desktop }
 
 class ScreenTypeLayout extends StatelessWidget {
   // Mobile will be returned by default
-  final Widget mobile;
-  final Widget tablet;
-  final Widget desktop;
+  final Widget? mobile;
+  final Widget? tablet;
+  final Widget? desktop;
 
   const ScreenTypeLayout({
-    Key key,
-    @required this.mobile,
+    Key? key,
+    this.mobile,
     this.tablet,
     this.desktop,
   }) : super(key: key);
@@ -24,10 +24,9 @@ class ScreenTypeLayout extends StatelessWidget {
         switch (sizingInformation.deviceType) {
           case DeviceScreenType.Tablet:
           case DeviceScreenType.Desktop:
-            return tablet;
-            break;
+            return tablet ?? Container();
           default:
-            return mobile;
+            return mobile ?? Container();
         }
       },
     );

@@ -6,19 +6,24 @@ class PageBody extends StatefulWidget {
   final void Function(int index) onItemSelected;
   final List<Widget> pagesWidget;
 
-  const PageBody({this.pageIndex, this.onItemSelected,@required this.pagesWidget});
+  const PageBody({
+    required this.pageIndex,
+    required this.onItemSelected,
+    required this.pagesWidget,
+  });
 
   @override
   _PageBodyState createState() => _PageBodyState();
 }
 
 class _PageBodyState extends State<PageBody> {
- List<Widget> pages;
+  List<Widget> pages = [];
   @override
   void initState() {
-    pages= widget.pagesWidget;
+    pages = widget.pagesWidget;
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(

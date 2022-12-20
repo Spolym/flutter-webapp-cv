@@ -110,6 +110,7 @@ class __HireMeButtonState extends State<_HireMeButton> {
               : Colors.transparent,
         ),
         child: AnimatedDefaultTextStyle(
+          child: Container(),
           duration: kThemeAnimationDuration,
           style: TextStyle(
             color: hovered ? Colors.white : ColorApp.colorMain,

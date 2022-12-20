@@ -76,14 +76,17 @@ class Navbar extends StatefulWidget {
   final int selectedIndex;
   final void Function(int index) onItemSelected;
 
-  Navbar({this.selectedIndex = 0, this.onItemSelected});
+  Navbar({
+    this.selectedIndex = 0,
+    required this.onItemSelected,
+  });
 
   @override
   _NavbarState createState() => _NavbarState();
 }
 
 class _NavbarState extends State<Navbar> {
-  int selectedIndex;
+  int selectedIndex = 0;
 
   final textStyle = TextStyle(
     color: Colors.white,
@@ -233,7 +236,7 @@ class _NavbarState extends State<Navbar> {
                               item,
                               style: textStyle.copyWith(
                                 fontWeight: FontWeight.w500,
-                                color: textStyle.color.withOpacity(
+                                color: textStyle.color?.withOpacity(
                                   selectedIndex == items.indexOf(item)
                                       ? 1.0
                                       : 0.75,

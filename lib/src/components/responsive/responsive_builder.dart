@@ -10,8 +10,8 @@ class ResponsiveBuilder extends StatelessWidget {
   ) builder;
 
   const ResponsiveBuilder({
-    Key key,
-    @required this.builder,
+    Key? key,
+    required this.builder,
   }) : super(key: key);
 
   @override

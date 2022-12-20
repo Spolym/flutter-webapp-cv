@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
       title: 'Samuel Polym CV',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: ColorApp.colorMain,
         fontFamily: 'Ubuntu',
       ),
       home: LayoutWrapper(),
