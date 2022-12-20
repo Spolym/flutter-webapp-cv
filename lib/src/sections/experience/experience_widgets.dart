@@ -11,7 +11,7 @@ class ExperienceManImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       backgroundColor: Colors.white,
-      radius: 200,
+      radius: 180,
       child: Image.asset(
         img,
         height: 200,

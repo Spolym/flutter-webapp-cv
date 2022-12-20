@@ -13,67 +13,77 @@ class _ExperienceSectionState extends State<ExperienceSection> {
     return Center(
       child: ListView(
         children: [
-          Row(
-            children: [
-              Spacer(flex: 2),
-              SizedBox(width: 32),
-              Expanded(
-                flex: 8,
-                child: ExperienceManImage(
-                  img: jobOneImg,
-                ),
-              ),
-              SizedBox(width: 36),
-              Expanded(
-                flex: 6,
-                child: ExperienceContent(
-                    jobTitle: jobOneTitle, jobDesc: jobOneDesc, jobImg: ""),
-              ),
-              Spacer(flex: 2),
-            ],
+          // job one
+          JobInfo(
+            companyTitle: jobOneTitle,
+            jobDesc: jobOneDesc,
+            companyLogo: jobOneImg,
           ),
-          Row(
-            children: [
-              Spacer(flex: 2),
-              SizedBox(width: 32),
-              Expanded(
-                flex: 8,
-                child: ExperienceManImage(
-                  img: jobTwoImg,
-                ),
-              ),
-              SizedBox(width: 36),
-              Expanded(
-                flex: 6,
-                child: ExperienceContent(
-                    jobTitle: jobTwoTitle,
-                    jobDesc: jobTwoDesc,
-                    jobImg: jobTwoImg),
-              ),
-              Spacer(flex: 2),
-            ],
+          // job two
+          JobInfo(
+            companyTitle: jobTwoTitle,
+            jobDesc: jobTwoDesc,
+            companyLogo: jobTwoImg,
           ),
-          Row(
-            children: [
-              Spacer(flex: 2),
-              SizedBox(width: 32),
-              Expanded(
-                flex: 8,
-                child: ExperienceManImage(
-                  img: jobThreeImg,
-                ),
-              ),
-              SizedBox(width: 36),
-              Expanded(
-                flex: 6,
-                child: ExperienceContent(
-                    jobTitle: jobOneTitle, jobDesc: jobOneDesc, jobImg: ""),
-              ),
-              Spacer(flex: 2),
-            ],
+          // job three
+          JobInfo(
+            companyTitle: jobThreeTitle,
+            jobDesc: jobThreeDesc,
+            companyLogo: jobThreeImg,
+          ),
+          // job four
+          JobInfo(
+            companyTitle: jobFourTitle,
+            jobDesc: jobFourDesc,
+            companyLogo: jobFourImg,
+          ),
+          // job five
+          JobInfo(
+            companyTitle: jobFiveTitle,
+            jobDesc: jobFiveDesc,
+            companyLogo: jobFiveImg,
           ),
         ],
       ),
+    );
+  }
+}
+
+class JobInfo extends StatelessWidget {
+  const JobInfo({
+    Key? key,
+    required this.companyTitle,
+    required this.jobDesc,
+    required this.companyLogo,
+  }) : super(key: key);
+
+  final companyTitle;
+  final jobDesc;
+  final companyLogo;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Spacer(flex: 2),
+        SizedBox(width: 32),
+        Expanded(
+          flex: 8,
+          child: ExperienceManImage(
+            img: companyLogo,
+          ),
+        ),
+        SizedBox(width: 36),
+        Expanded(
+          flex: 6,
+          child: ExperienceContent(
+            jobTitle: companyTitle,
+            jobDesc: jobDesc,
+            jobImg: companyLogo,
+          ),
+        ),
+        Spacer(flex: 2),
+      ],
     );
   }
 }

@@ -1,6 +1,4 @@
-2022/12/20-11:06:23.382 3824 Reusing MANIFEST C:\Users\spoly\AppData\Local\Temp\flutter_tools.2c48ac2f\flutter_tools_chrome_device.be583bd9\Default\Local Storage\leveldb/MANIFEST-000001
-2022/12/20-11:06:23.384 3824 Recovering log #3
-2022/12/20-11:06:23.385 3824 Reusing old log C:\Users\spoly\AppData\Local\Temp\flutter_tools.2c48ac2f\flutter_tools_chrome_device.be583bd9\Default\Local Storage\leveldb/000003.log 
-2022/12/20-11:35:35.515 42d4 Level-0 table #5: started
-2022/12/20-11:35:35.523 42d4 Level-0 table #5: 36756 bytes OK
-2022/12/20-11:35:35.529 42d4 Delete type=0 #3
+2022/12/20-14:31:10.957 47c4 Reusing MANIFEST C:\Users\spoly\AppData\Local\Temp\flutter_tools.86e2eda1\flutter_tools_chrome_device.37174d98\Default\Local Storage\leveldb/MANIFEST-000001
+2022/12/20-14:31:10.960 47c4 Recovering log #4
+2022/12/20-14:31:10.961 47c4 Reusing old log C:\Users\spoly\AppData\Local\Temp\flutter_tools.86e2eda1\flutter_tools_chrome_device.37174d98\Default\Local Storage\leveldb/000004.log 
+2022/12/20-14:31:10.962 47c4 Delete type=0 #3
