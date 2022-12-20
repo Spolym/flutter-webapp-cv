@@ -9,16 +9,6 @@ class Introduction extends StatefulWidget {
 
 class _IntroductionState extends State<Introduction>
     with SingleTickerProviderStateMixin {
-  static bool helloSeen = false;
-  static bool nameSeen = false;
-  static bool positionSeen = false;
-  static bool abstractSeen = false;
-
-  static bool showName = false;
-  static bool showPosition = false;
-  static bool showAbstract = false;
-  static bool showHireMe = false;
-
   @override
   Widget build(BuildContext context) {
     return AnimatedSize(
@@ -143,7 +133,7 @@ class HeroImage extends StatelessWidget {
         color: backgroundColor,
         border: Border.all(color: borderColor, width: 2),
         image: DecorationImage(
-          image: AssetImage('assets/images/me.png'),
+          image: AssetImage('images/pic_of_me.png'),
         ),
       ),
     );

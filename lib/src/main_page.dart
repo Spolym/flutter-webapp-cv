@@ -2,6 +2,7 @@
 import 'dart:html' as html;
 
 import 'package:flutter/material.dart';
+import 'package:personal_web/colors.dart';
 import 'package:personal_web/src/body.dart';
 import 'package:personal_web/src/components/drawer.dart';
 import 'package:personal_web/src/components/nav_bar.dart';
@@ -87,7 +88,9 @@ class _BackgroundPainter extends CustomPainter {
     path.close();
 
     final paint = Paint()
-      ..color = ColorApp.colorMain
+      // back ground colors for desk top layout
+      // ..color = ColorApp.colorMain
+      ..color = primaryColor
       ..style = PaintingStyle.fill;
 
     canvas.drawPath(path, paint);
