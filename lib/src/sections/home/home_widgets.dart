@@ -133,7 +133,7 @@ class HeroImage extends StatelessWidget {
         color: backgroundColor,
         border: Border.all(color: borderColor, width: 2),
         image: DecorationImage(
-          image: AssetImage('images/pic_of_me.png'),
+          image: AssetImage('assets/images/pic_of_me.png'),
         ),
       ),
     );

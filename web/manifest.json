@@ -1,11 +1,11 @@
 {
-    "name": "Behnam Bagvand",
+    "name": "Samuel Polym",
     "short_name": "Bbagvand",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Behnam bagvand's portfolio website.",
+    "description": "Samuel Polym's portfolio website.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
