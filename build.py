@@ -23,11 +23,8 @@ os.system('flutter build web --web-renderer html')
 print('Uploading files...')
 shutil.make_archive('build', 'zip', 'build/web')
 ftp.storbinary('STOR build.zip', open('build.zip', 'rb'))
-# unzip the file
-ftp.retrbinary('RETR build.zip', open('build.zip', 'wb').write)
-# print ftp directory
-print('FTP directory:')
-print(ftp.dir())
+
+# done
 print('\n'*3)
 print('Done!')
 ftp.quit()
