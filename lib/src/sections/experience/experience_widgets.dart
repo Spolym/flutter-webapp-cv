@@ -49,38 +49,44 @@ class _ExperienceContentState extends State<ExperienceContent>
       vsync: this,
       duration: kThemeAnimationDuration,
       alignment: Alignment.topCenter,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (widget.showHeader)
-            Text(
-              widget.jobTitle,
-              style: TextStyle(
+      child: Container(
+        padding: EdgeInsets.all(20),
+        color: Colors.grey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (widget.showHeader)
+              Text(
+                widget.jobTitle,
+                style: TextStyle(
+                  color: widget.color,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 1.4,
+                ),
+              ),
+            if (widget.showHeader)
+              Container(
+                width: 60,
+                height: 2,
+                margin: const EdgeInsets.only(top: 4, bottom: 16),
                 color: widget.color,
-                fontSize: 24,
-                fontWeight: FontWeight.w700,
-                letterSpacing: 1.4,
+              ),
+            Container(
+              child: Text(
+                widget.jobDesc,
+                style: TextStyle(
+                  color: widget.color,
+                  fontSize: 16,
+                  letterSpacing: 1.2,
+                  height: 1.3,
+                ),
               ),
             ),
-          if (widget.showHeader)
-            Container(
-              width: 60,
-              height: 2,
-              margin: const EdgeInsets.only(top: 4, bottom: 16),
-              color: widget.color,
-            ),
-          Text(
-            widget.jobDesc,
-            style: TextStyle(
-              color: widget.color,
-              fontSize: 16,
-              letterSpacing: 1.2,
-              height: 1.3,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

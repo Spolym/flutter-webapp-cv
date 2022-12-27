@@ -10,6 +10,7 @@ class ExperienceSection extends StatefulWidget {
 class _ExperienceSectionState extends State<ExperienceSection> {
   @override
   Widget build(BuildContext context) {
+    double margin = 50;
     return Center(
       child: ListView(
         children: [
@@ -19,11 +20,17 @@ class _ExperienceSectionState extends State<ExperienceSection> {
             jobDesc: jobOneDesc,
             companyLogo: jobOneImg,
           ),
+          SizedBox(
+            height: margin,
+          ),
           // job two
           JobInfo(
             companyTitle: jobTwoTitle,
             jobDesc: jobTwoDesc,
             companyLogo: jobTwoImg,
+          ),
+          SizedBox(
+            height: margin,
           ),
           // job three
           JobInfo(
@@ -31,11 +38,17 @@ class _ExperienceSectionState extends State<ExperienceSection> {
             jobDesc: jobThreeDesc,
             companyLogo: jobThreeImg,
           ),
+          SizedBox(
+            height: margin,
+          ),
           // job four
           JobInfo(
             companyTitle: jobFourTitle,
             jobDesc: jobFourDesc,
             companyLogo: jobFourImg,
+          ),
+          SizedBox(
+            height: margin,
           ),
           // job five
           JobInfo(
@@ -43,6 +56,9 @@ class _ExperienceSectionState extends State<ExperienceSection> {
             jobDesc: jobFiveDesc,
             companyLogo: jobFiveImg,
           ),
+          SizedBox(
+            height: 75,
+          )
         ],
       ),
     );

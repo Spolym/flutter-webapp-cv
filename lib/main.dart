@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_web/colors.dart';
 import 'package:personal_web/src/components/responsive/layout_wrapper.dart';
-import 'package:personal_web/src/utils/social_colors.dart';
 
 void main() {
   runApp(MyApp());
