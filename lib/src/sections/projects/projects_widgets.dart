@@ -1,75 +1,92 @@
 import 'package:flutter/material.dart';
+import 'package:personal_web/src/sections/projects/projects_info.dart';
 
 class ProjectsManImage extends StatelessWidget {
+  const ProjectsManImage({
+    required this.img,
+  });
+
+  final String img;
   @override
   Widget build(BuildContext context) {
-    return Image.asset('assets/images/man.png');
+    return CircleAvatar(
+      backgroundColor: Colors.white,
+      radius: 180,
+      child: Image.asset(
+        img,
+        height: 200,
+      ),
+    );
   }
 }
 
 class ProjectsContent extends StatefulWidget {
+  const ProjectsContent({
+    this.color = Colors.white,
+    this.isMobile = false,
+    this.showHeader = true,
+    required this.projectsTitle,
+    required this.projectsDesc,
+    required this.projectsImg,
+  });
+
   final Color color;
   final bool isMobile;
+  final bool showHeader;
+  final String projectsTitle;
+  final String projectsDesc;
+  final String projectsImg;
 
-  const ProjectsContent({this.color = Colors.white, this.isMobile = false});
   @override
   _ProjectsContentState createState() => _ProjectsContentState();
 }
 
 class _ProjectsContentState extends State<ProjectsContent>
     with TickerProviderStateMixin {
-  static bool showAbout = false;
-  static bool showStack1 = false;
-  static bool showStack2 = false;
-
-  static bool whoSeen = false;
-  static bool aboutSeen = false;
-  static bool stack1Seen = false;
-  static bool stack2Seen = false;
-
-  final stack = [
-    'Dart (Flutter)',
-    'Java (Android)',
-    'Firebase',
-    'MySQL',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return AnimatedSize(
       vsync: this,
       duration: kThemeAnimationDuration,
       alignment: Alignment.topCenter,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            'Projects',
-            style: TextStyle(
-              color: widget.color,
-              fontSize: 24,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 1.4,
+      child: Container(
+        padding: EdgeInsets.all(20),
+        color: Colors.grey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (widget.showHeader)
+              Text(
+                widget.projectsTitle,
+                style: TextStyle(
+                  color: widget.color,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 1.4,
+                ),
+              ),
+            if (widget.showHeader)
+              Container(
+                width: 60,
+                height: 2,
+                margin: const EdgeInsets.only(top: 4, bottom: 16),
+                color: widget.color,
+              ),
+            Container(
+              child: Text(
+                widget.projectsDesc,
+                style: TextStyle(
+                  color: widget.color,
+                  fontSize: 16,
+                  letterSpacing: 1.2,
+                  height: 1.3,
+                ),
+              ),
             ),
-          ),
-          Container(
-            width: 60,
-            height: 2,
-            margin: const EdgeInsets.only(top: 4, bottom: 16),
-            color: widget.color,
-          ),
-          Text(
-            "",
-            style: TextStyle(
-              color: widget.color,
-              fontSize: 16,
-              letterSpacing: 1.2,
-              height: 1.3,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
