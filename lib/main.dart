@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:personal_web/colors.dart';
 import 'package:personal_web/src/components/responsive/layout_wrapper.dart';
 
 void main() {

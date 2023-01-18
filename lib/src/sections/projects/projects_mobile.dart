@@ -61,14 +61,6 @@ class ProjectsSectionMobile extends StatelessWidget {
               projectsImg: projectsFourImg,
             ),
             SizedBox(height: 50),
-            // projects five
-            ProjectsContent(
-              color: ColorApp.colorMain,
-              isMobile: true,
-              projectsTitle: projectsFiveTitle,
-              projectsDesc: projectsFiveDesc,
-              projectsImg: projectsFiveImg,
-            ),
           ],
         ),
       ),

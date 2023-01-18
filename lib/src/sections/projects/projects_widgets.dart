@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:personal_web/src/sections/projects/projects_info.dart';
 
 class ProjectsManImage extends StatelessWidget {
   const ProjectsManImage({
@@ -14,7 +13,7 @@ class ProjectsManImage extends StatelessWidget {
       radius: 180,
       child: Image.asset(
         img,
-        height: 200,
+        height: 175,
       ),
     );
   }

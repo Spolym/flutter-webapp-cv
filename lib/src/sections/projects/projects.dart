@@ -50,12 +50,6 @@ class _ProjectsSectionState extends State<ProjectsSection> {
           SizedBox(
             height: margin,
           ),
-          // projects five
-          JobInfo(
-            companyTitle: projectsFiveTitle,
-            projectsDesc: projectsFiveDesc,
-            companyLogo: projectsFiveImg,
-          ),
           SizedBox(
             height: 75,
           )
